@@ -6,13 +6,13 @@ import requests
 from urllib.parse import urlparse
 
 class MotionDetectionController:
-    def __init__(self, esp32_ip="192.168.1.100", arduino_port="COM3", arduino_baud=9600):
+    def __init__(self, esp32_ip="192.168.1.100", arduino_port="COM5", arduino_baud=9600):
         """
         Initialize the motion detection controller
         
         Args:
             esp32_ip: IP address of the ESP32-CAM
-            arduino_port: Serial port for Arduino Uno (e.g., "COM3" on Windows, "/dev/ttyUSB0" on Linux)
+            arduino_port: Serial port for Arduino Uno (e.g., "COM5" on Windows, "/dev/ttyUSB0" on Linux)
             arduino_baud: Baud rate for Arduino communication
         """
         self.esp32_stream_url = f"http://{esp32_ip}/stream"
@@ -218,7 +218,7 @@ class MotionDetectionController:
 def main():
     # Configuration - Update these values for your setup
     ESP32_IP = "192.168.1.100"  # Replace with your ESP32-CAM IP address
-    ARDUINO_PORT = "COM3"       # Replace with your Arduino port (Windows: COM3, Linux: /dev/ttyUSB0)
+    ARDUINO_PORT = "COM5"       # Replace with your Arduino port (Windows: COM5, Linux: /dev/ttyUSB0)
     ARDUINO_BAUD = 9600
     
     # Create controller instance

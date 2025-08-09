@@ -26,12 +26,12 @@ import threading
 import queue
 
 class ESP32CamTester:
-    def __init__(self, com_port="COM3", baud_rate=115200):
+    def __init__(self, com_port="COM5", baud_rate=115200):
         """
         Initialize ESP32-CAM tester
         
         Args:
-            com_port: Serial port for ESP32-CAM (Windows: COM3, Linux: /dev/ttyUSB0)
+            com_port: Serial port for ESP32-CAM (Windows: COM5, Linux: /dev/ttyUSB0)
             baud_rate: Serial communication speed
         """
         self.com_port = com_port
@@ -251,7 +251,7 @@ def main():
     print("====================")
     
     # Configuration - update these for your setup
-    COM_PORT = "COM3"  # Windows: COM3, COM4, etc. Linux: /dev/ttyUSB0, /dev/ttyACM0
+    COM_PORT = "COM5"  # Windows: COM5, COM4, etc. Linux: /dev/ttyUSB0, /dev/ttyACM0
     BAUD_RATE = 115200
     
     print(f"Connecting to ESP32-CAM on {COM_PORT}")

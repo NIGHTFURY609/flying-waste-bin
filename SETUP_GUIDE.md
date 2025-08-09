@@ -142,6 +142,7 @@ GND               ->  Common ground with Arduino
    python computer_controller.py
    ```
 4. **Choose input source**:
+
    - Option 1: ESP32-CAM stream (for final setup)
    - Option 2: Local camera (for testing)
 
