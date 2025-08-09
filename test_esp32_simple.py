@@ -15,7 +15,7 @@ import serial
 import time
 
 class SimpleESP32CamTester:
-    def __init__(self, com_port="COM3", baud_rate=115200):
+    def __init__(self, com_port="COM5", baud_rate=115200):
         self.com_port = com_port
         self.baud_rate = baud_rate
         self.serial_connection = None
