@@ -56,9 +56,14 @@ while True:
             # Display the command on the screen
             cv2.putText(frame, command, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 3)
 
+    # Add fallback text when no significant motion is detected
+    if not contours or cv2.contourArea(largest_contour) <= 500:
+        cv2.putText(frame, "No motion detected", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 3)
+        command = "Stay"
+
     # Display the resulting frames
     cv2.imshow('Motion Detection', frame)
-    # cv2.imshow('Foreground Mask', fg_mask) # You can uncomment this to see the mask again
+    cv2.imshow('Foreground Mask', fg_mask) # You can uncomment this to see the mask again
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
